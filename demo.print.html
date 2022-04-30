@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Report</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <style>
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }
+    </style>
+        <link rel="stylesheet" href="css/variables.css" />
+        <link rel="stylesheet" href="css/pages.css" />
+        <link rel="stylesheet" href="css/interface.css" />
+        <link rel="stylesheet" href="css/print.css" />
+        
+    <!-- katex render is called at bottom of body -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css"
+        integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"
+        integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+</head>
+
+<body>
+    
+    <div class="pages">
+        <div id="title-page"
+            style="height: 246.9mm; text-align: center; display: flex; flex-direction: column; justify-content: center; gap: 4mm;">
+            <div style="font-size: 1.875rem; font-weight: 500">Demo
+Report</div>
+            <div>Felix Andreas</div>
+            <div>April 30, 2022</div>
+        </div>
+
+        <div class="frontmatter">
+            <section id="abstract" class="level1">
+                <h1>Abstract</h1>
+                <p>This is a demo report to showcase the capabilities of
+                this pandoc template.</p>
+            </section>
+
+            <section id="toc" class="level1">
+                <h1>Contents</h1>
+                <ul>
+                <li><a href="#introduction"><span
+                class="toc-section-number">1</span> Introduction</a>
+                <ul>
+                <li><a href="#tables"><span
+                class="toc-section-number">1.1</span> Tables</a></li>
+                <li><a href="#sub-heading"><span
+                class="toc-section-number">1.2</span> Sub Heading</a>
+                <ul>
+                <li><a href="#sub-sub-heading"><span
+                class="toc-section-number">1.2.1</span> Sub Sub
+                Heading</a></li>
+                </ul></li>
+                </ul></li>
+                <li><a href="#references">References</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Do not indent "body", because <code> tags are white-space sensitive! -->
+        <main><section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span>
+Introduction</h1>
+<section id="tables" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span>
+Tables</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Col 1</th>
+<th>Col 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>value</td>
+<td>value</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sub-heading" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Sub
+Heading</h2>
+<p><em>This is italic</em> and <strong>this is bold!</strong></p>
+<p>You can write math.</p>
+<div id="eq:mass–energy-equivalence">
+<table style="width:99%;">
+<colgroup>
+<col style="width: 90%" />
+<col style="width: 9%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math display"> E = m c^2
+</span></td>
+<td style="text-align: right;"><span
+class="math display">(1.1)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>And you can referene it <span class="citation" data-cites="mass"><a
+href="#ref-mass"
+role="doc-biblioref"><strong>mass?</strong></a></span>–energy-equivalence.</p>
+<hr />
+<div>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 90%" />
+<col style="width: 9%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math display"> \dot{N}
+\langle \epsilon^2 \rangle = \int_0^\infty \epsilon^2 \dot{n}(\epsilon)
+\mathrm{d} \epsilon = 2 C_\mathrm{q} \gamma^2 \frac{U_0 E_0}{T_0}
+\frac{|\kappa_\mathrm{x0}|^3}{\langle \kappa_\mathrm{x0}^2 \rangle_s}
+</span></td>
+<td style="text-align: right;"><span
+class="math display">(1.2)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><a href="https://github.com/andreasfelix">This is a link</a>.</p>
+<section id="sub-sub-heading" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1"><span class="header-section-number">1.2.1</span>
+Sub Sub Heading</h3>
+<figure>
+<img src="figures/example.svg" alt="This is an examplary fig caption" />
+<figcaption aria-hidden="true">This is an examplary fig
+caption</figcaption>
+</figure>
+<ul>
+<li>item 1</li>
+<li>item 2
+<ul>
+<li>sub item 1</li>
+<li>sub item 2</li>
+</ul></li>
+</ul>
+<p>Ordered List</p>
+<ol type="1">
+<li>item 1</li>
+<li>item 2
+<ol type="1">
+<li>sub item 1</li>
+<li>sub item 2</li>
+</ol></li>
+</ol>
+<p>Tasklist</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+finished</li>
+<li><input type="checkbox" disabled="" />
+todo</li>
+</ul>
+<p>You can also cite NumPy <span class="citation" data-cites="numpy"><a
+href="#ref-numpy" role="doc-biblioref">[1]</a></span> or matplotlib
+<span class="citation" data-cites="matplotlib"><a href="#ref-matplotlib"
+role="doc-biblioref">[2]</a></span></p>
+</section>
+</section>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-numpy" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">C.
+R. Harris <em>et al.</em>, <span>“Array programming with
+<span>NumPy</span>”</span>, <em>Nature</em>, vol. 585, no. 7825, pp.
+357–362, Sep. 2020, doi: <a
+href="https://doi.org/10.1038/s41586-020-2649-2">10.1038/s41586-020-2649-2</a>.</div>
+</div>
+<div id="ref-matplotlib" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">J.
+D. Hunter, <span>“Matplotlib: A 2D graphics environment”</span>,
+<em>Computing in Science &amp; Engineering</em>, vol. 9, no. 3, pp.
+90–95, 2007, doi: <a
+href="https://doi.org/10.1109/MCSE.2007.55">10.1109/MCSE.2007.55</a>.</div>
+</div>
+</div>
+</section></main>
+    </div>
+
+        <!-- set a class to all tables containing math -->
+        <script>
+            document.querySelectorAll(".math.display").forEach(element => {
+                element.closest("table")?.classList.add("math-table")
+            })
+        </script>
+        <!-- add (cit. in sec. 2.x) links to bibliography -->
+        <script>
+            const targetIdsToLinks = {}
+
+            for (const [index, link] of document.querySelectorAll("span.citation>a").entries()) {
+                const targetId = link.getAttribute("href")
+                link.id = `citation-${index}`
+                if (targetIdsToLinks[targetId] === undefined) {
+                    targetIdsToLinks[targetId] = [link]
+                } else {
+                    targetIdsToLinks[targetId].push(link)
+                }
+            }
+
+            for (const [targetId, links] of Object.entries(targetIdsToLinks)) {
+                const target = document.querySelector(targetId).children[1]
+                const newDiv = document.createElement("span");
+                newDiv.classList.add("cited-on")
+                newDiv.appendChild(document.createTextNode(" (cit. in sec. "))
+
+                links.map((link, index) => {
+                    if (index !== 0) {
+                        newDiv.appendChild(document.createTextNode(", "))
+                    }
+
+                    const linkNode = document.createElement('a');
+                    const text = link.closest("section").getAttribute("data-number")
+                    linkNode.appendChild(document.createTextNode(text));
+                    linkNode.href = `#${link.id}`;
+                    newDiv.appendChild(linkNode)
+                })
+
+                newDiv.appendChild(document.createTextNode(")"))
+                target.appendChild(newDiv)
+            }
+        </script>
+    
+    <!-- don't wait for DOMContentLoaded event, because katex has to be executed before pagedjs chunker -->
+    <script>
+        document.querySelectorAll(".math").forEach(element => {
+            const texText = element.firstChild;
+            if (element.tagName == 'SPAN') {
+                katex.render(texText.data, element, {
+                    displayMode: element.classList.contains('display'),
+                    output: 'html',
+                    throwOnError: false,
+                });
+            }
+        })
+    </script>
+</body>
+
+</html>
