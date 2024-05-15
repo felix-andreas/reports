@@ -2,7 +2,7 @@
 
 A pandoc template to create scientific reports.
 
-See demo: https://andreasfelix.github.io/reports/demo.html
+See demo: https://felix-andreas.github.io/reports/demo.html
 
 ## Setup ⚙️
 
@@ -15,7 +15,7 @@ The `flake.nix` provides a development environment with:
 Copy this template using nix:
 
 ```
-nix flake new --template github:andreasfelix/reports <desired name>
+nix flake new --template github:felix-andreas/reports <desired name>
 ```
 
 Activate development environment:
